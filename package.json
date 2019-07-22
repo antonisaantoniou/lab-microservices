@@ -1,0 +1,46 @@
+{
+  "name": "lab-microservices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "apisServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently -n \"api-server,simulation-server, penalty-server\" -c \"bgBlue,bgMagenta,bgRed\" \"NODE_ENV=development node apisServer.js\" \"NODE_ENV=development node carSimulationServer.js\" \"NODE_ENV=development node penaltyServer.js\" ",
+    "start": "concurrently -n \"api-server,simulation-server, penalty-server\" -c \"bgBlue,bgMagenta,bgRed\" \"node apisServer.js\" \"node carSimulationServer.js\" \"node penaltyServer.js\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spinning-spindle/lab-microservices.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spinning-spindle/lab-microservices/issues"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.3",
+    "cookie-parser": "~1.4.4",
+    "custom-env": "^1.0.2",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-slash": "^2.0.1",
+    "express-validator": "^6.1.1",
+    "http-errors": "~1.6.3",
+    "mongoose": "^5.6.5",
+    "morgan": "~1.9.1",
+    "pug": "^2.0.4",
+    "random-location": "^1.0.12",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.5.13",
+    "@types/express-validator": "^3.0.0",
+    "@types/mocha": "^5.2.7",
+    "@types/mongoose": "^5.5.8",
+    "@types/node": "^12.6.8",
+    "@types/request-promise": "^4.1.44",
+    "@types/winston": "^2.4.4"
+  }
+}

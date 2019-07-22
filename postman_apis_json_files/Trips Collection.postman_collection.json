@@ -1,0 +1,651 @@
+{
+	"info": {
+		"_postman_id": "f5955fb2-7d28-4278-8b00-7fa3794d8521",
+		"name": "Trips Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all trips",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/trips/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"trips",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all trips - success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/trips/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"trips",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1215"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4bf-50Hbu3hEG2naYsCtcvqwOgP/MAs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2019 06:32:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"trips\": [\n        {\n            \"trip_id\": 150,\n            \"starting_point\": {\n                \"coordinates\": [\n                    35.44820064,\n                    33.60398324\n                ]\n            },\n            \"finishing_point\": {\n                \"coordinates\": [\n                    35.41561151,\n                    33.21537355\n                ]\n            },\n            \"distance\": 10\n        },\n        {\n            \"trip_id\": 151,\n            \"starting_point\": {\n                \"coordinates\": [\n                    35.2542703,\n                    33.28545285\n                ]\n            },\n            \"finishing_point\": {\n                \"coordinates\": [\n                    35.05526442,\n                    33.28545285\n                ]\n            },\n            \"distance\": 10\n        },\n        {\n            \"trip_id\": 152,\n            \"starting_point\": {\n                \"coordinates\": [\n                    35.44820064,\n                    33.60398324\n                ]\n            },\n            \"finishing_point\": {\n                \"coordinates\": [\n                    35.35271351,\n                    33.26833391\n                ]\n            },\n            \"distance\": 10\n        },\n        {\n            \"trip_id\": 153,\n            \"starting_point\": {\n                \"coordinates\": [\n                    35.01205962,\n                    33.37973868\n                ]\n            },\n            \"finishing_point\": {\n                \"coordinates\": [\n                    34.86962334,\n                    33.4344044\n                ]\n            },\n            \"distance\": 10\n        },\n        {\n            \"trip_id\": 154,\n            \"starting_point\": {\n                \"coordinates\": [\n                    35.12022482,\n                    33.27288412\n                ]\n            },\n            \"finishing_point\": {\n                \"coordinates\": [\n                    35.30464141,\n                    33.64099435\n                ]\n            },\n            \"distance\": 10\n        },\n        {\n            \"trip_id\": 155,\n            \"starting_point\": {\n                \"coordinates\": [\n                    35.32531618,\n                    33.19812195\n                ]\n            },\n            \"finishing_point\": {\n                \"coordinates\": [\n                    35.48666634,\n                    33.21309995\n                ]\n            },\n            \"distance\": 10\n        },\n        {\n            \"trip_id\": 156,\n            \"starting_point\": {\n                \"coordinates\": [\n                    35.47509555,\n                    33.31647298\n                ]\n            },\n            \"finishing_point\": {\n                \"coordinates\": [\n                    35.03904619,\n                    33.4807328\n                ]\n            },\n            \"distance\": 10\n        },\n        {\n            \"trip_id\": 157,\n            \"starting_point\": {\n                \"coordinates\": [\n                    35.14026272,\n                    32.92903834\n                ]\n            },\n            \"finishing_point\": {\n                \"coordinates\": [\n                    35.10150748,\n                    33.31662687\n                ]\n            },\n            \"distance\": 10\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Specific trip",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/trips/200",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"trips",
+						"200"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Specific trip - success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/trips/154",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"trips",
+								"154"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "172"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ac-PoTKMJj1jBGWE5CCvsDvMu9/j/Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2019 06:39:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"trip\": {\n        \"trip_id\": 154,\n        \"starting_point\": {\n            \"coordinates\": [\n                35.12022482,\n                33.27288412\n            ]\n        },\n        \"finishing_point\": {\n            \"coordinates\": [\n                35.30464141,\n                33.64099435\n            ]\n        },\n        \"distance\": 10\n    }\n}"
+				},
+				{
+					"name": "Get Specific trip - trip not found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/trips/200",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"trips",
+								"200"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c-20hUA95IFhDNhY4Dffj6UdW7Gac\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2019 06:40:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"field\": \"trip\",\n    \"msg\": \"Trip does not exist\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add new trip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"starting_point\" : [35.46636198, 33.27624238],\n\t\"finishing_point\": [35.20818862, 33.41908832],\n\t\"trip_id\": 200,\n\t\"distance\": 10\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/trips/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"trips",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add new trip - Trip already exists",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"starting_point\" : [35.46636198, 33.27624238],\n\t\"finishing_point\": [35.20818862, 33.41908832],\n\t\"trip_id\": 200,\n\t\"distance\": 10\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/trips/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"trips",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f-vqmvwePRAJnkLJHIEPRIKEqhOAw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2019 07:07:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"field\": \"trip_id\",\n    \"msg\": \"Trip already exists\"\n}"
+				},
+				{
+					"name": "Add new trip - success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"starting_point\" : [35.46636198, 33.27624238],\n\t\"finishing_point\": [35.20818862, 33.41908832],\n\t\"trip_id\": 200,\n\t\"distance\": 10\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/trips/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"trips",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "172"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ac-S/+r5bbmfqjPM6QNCFgOrynWX9U\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2019 07:06:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"trip\": {\n        \"trip_id\": 200,\n        \"starting_point\": {\n            \"coordinates\": [\n                35.46636198,\n                33.27624238\n            ]\n        },\n        \"finishing_point\": {\n            \"coordinates\": [\n                35.20818862,\n                33.41908832\n            ]\n        },\n        \"distance\": 10\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update trip",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"starting_point\" : [35.46636888, 33.27624888],\n\t\"finishing_point\": [35.20818888, 33.41908888],\n\t\"trip_id\": 201,\n\t\"distance\": 11\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/trips/200",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"trips",
+						"200"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update trip  - trip already exists",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"starting_point\" : [35.46636888, 33.27624888],\n\t\"finishing_point\": [35.20818888, 33.41908888],\n\t\"trip_id\": 201,\n\t\"distance\": 11\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/trips/200",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"trips",
+								"200"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c-20hUA95IFhDNhY4Dffj6UdW7Gac\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2019 07:31:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"field\": \"trip\",\n    \"msg\": \"Trip does not exist\"\n}"
+				},
+				{
+					"name": "Update trip - success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"starting_point\" : [35.46636888, 33.27624888],\n\t\"finishing_point\": [35.20818888, 33.41908888],\n\t\"trip_id\": 201,\n\t\"distance\": 11\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/trips/200",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"trips",
+								"200"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2019 07:30:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete trip",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/trips/201",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"trips",
+						"201"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete trip - success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/trips/201",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"trips",
+								"201"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2019 07:33:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				},
+				{
+					"name": "Delete trip - Trip does not exist",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/trips/300",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"trips",
+								"300"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c-20hUA95IFhDNhY4Dffj6UdW7Gac\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2019 07:32:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"field\": \"trip\",\n    \"msg\": \"Trip does not exist\"\n}"
+				}
+			]
+		}
+	]
+}

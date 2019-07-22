@@ -1,0 +1,10 @@
+**/node_modules
+*.js
+*.js.map
+.git
+.dockerignore
+Dockerfile
+docker-compose.yml
+tests
+.env.development
+logs/**/*

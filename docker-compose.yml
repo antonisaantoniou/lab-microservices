@@ -1,0 +1,40 @@
+version: '3'
+services:
+  app: # Name of the server
+    container_name: docker-node
+    restart: always # restarts on crash
+    build: . # dockerfile current dir
+    ports: # bind ports between docker and local machine
+      - '3000:3000'
+    links: # link between dockers (mongo db and rabbit mq)
+      - mongo
+      - rabbitmq
+    depends_on:
+      - rabbitmq
+    environment: # environment variables
+      - NODE_ENV=staging
+  rabbitmq: # Name of the server
+    image: "rabbitmq:3-management"
+    hostname: "rabbit1"
+    environment: # environment variables
+      RABBITMQ_ERLANG_COOKIE: ${RABBITMQ_ERLANG_COOKIE}
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS}
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    labels:
+      NAME: "rabbitmq1"
+  mongo: # Name of the server
+    container_name: mongo
+    image: mongo
+    ports:
+      - '27017:27017'
+  opa:
+    image: openpolicyagent/opa:0.10.5
+    ports:
+      - 8181:8181
+    command: run --server --log-level=debug api_authz.rego
+    volumes:
+      - ./opa_policies/api_authz.rego:/api_authz.rego

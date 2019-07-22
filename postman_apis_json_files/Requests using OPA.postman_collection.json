@@ -1,0 +1,1096 @@
+{
+	"info": {
+		"_postman_id": "f426f136-a50f-420c-b6cd-262bfb23344e",
+		"name": "Requests using OPA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get drivers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/drivers/?user=david",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"drivers",
+						""
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "david"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Tony does not haves access because he is not an employee",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/drivers/?user=tony",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"drivers",
+								""
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "tony"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "18"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12-fQLDL/Nln/eCjWgaxeYRdYF/8Vg\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Jul 2019 16:04:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Access denied tony"
+				},
+				{
+					"name": "User david has access to get drivers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/drivers/?user=david",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"drivers",
+								""
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "david"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "378"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17a-4b90QDI5vmHLHlbgsVdrfqEA/6A\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Jul 2019 16:03:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"drivers\": [\n        {\n            \"first_name\": \"John\",\n            \"last_name\": \"A\",\n            \"license_no\": \"AB10001\",\n            \"age\": 35\n        },\n        {\n            \"first_name\": \"John\",\n            \"last_name\": \"B\",\n            \"license_no\": \"AB10002\",\n            \"age\": 30\n        },\n        {\n            \"first_name\": \"John\",\n            \"last_name\": \"C\",\n            \"license_no\": \"AB10003\",\n            \"age\": 29\n        },\n        {\n            \"first_name\": \"John\",\n            \"last_name\": \"D\",\n            \"license_no\": \"AB10004\",\n            \"age\": 32\n        },\n        {\n            \"first_name\": \"John\",\n            \"last_name\": \"E\",\n            \"license_no\": \"AB10005\",\n            \"age\": 45\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get specific driver",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/drivers/?user=david",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"drivers",
+						""
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "david"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get specific driver - Tony does not have access",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/drivers/AB10001?user=tony",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"drivers",
+								"AB10001"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "tony"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "18"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12-fQLDL/Nln/eCjWgaxeYRdYF/8Vg\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Jul 2019 16:06:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Access denied tony"
+				},
+				{
+					"name": "Get specific driver - john has access",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/drivers/AB10001?user=john",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"drivers",
+								"AB10001"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "john"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "95"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5f-d5aISqWCBV6XvPQh+LkvRmryaEY\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Jul 2019 16:06:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"driver\": {\n        \"first_name\": \"John\",\n        \"last_name\": \"A\",\n        \"license_no\": \"AB10001\",\n        \"age\": 35\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Add new driver",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "license_no",
+							"value": "AB10011",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "AC",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "John",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "45",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/drivers/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"drivers",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add new driver - tony does not",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "license_no",
+									"value": "AB10011",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "AC",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "45",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/drivers/?user=tony",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"drivers",
+								""
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "tony"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "18"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12-fQLDL/Nln/eCjWgaxeYRdYF/8Vg\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Jul 2019 16:11:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Access denied tony"
+				},
+				{
+					"name": "Add new driver - david has access",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "license_no",
+									"value": "AB10011",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "AC",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "45",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/drivers/?user=david",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"drivers",
+								""
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "david"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "96"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"60-pCUPlyWYe2PJLsyppVgvAbppbKE\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Jul 2019 16:10:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"driver\": {\n        \"first_name\": \"John\",\n        \"last_name\": \"AC\",\n        \"license_no\": \"AB10011\",\n        \"age\": 45\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update driver",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "last_name",
+							"value": "NewLastName",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/drivers/AB10011?user=david",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"drivers",
+						"AB10011"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "david"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update driver - access denied",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "last_name",
+									"value": "NewLastName",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/drivers/AB10011?user=tony",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"drivers",
+								"AB10011"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "tony"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "18"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12-fQLDL/Nln/eCjWgaxeYRdYF/8Vg\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Jul 2019 16:13:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Access denied tony"
+				},
+				{
+					"name": "Update driver - david has access",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "last_name",
+									"value": "NewLastName",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/drivers/AB10011?user=david",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"drivers",
+								"AB10011"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "david"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Jul 2019 16:13:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete driver",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/drivers/AB10009?user=john",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"drivers",
+						"AB10009"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "john"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete driver - Jonh does not have access as an employee",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3000/api/drivers/AB10009?user=john",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"drivers",
+								"AB10009"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "john"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "18"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12-3SDnZchr9fz9mHRn27ko6PZqewE\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Jul 2019 16:14:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Access denied john"
+				},
+				{
+					"name": "Delete driver - David can delete a driver as an admin",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3000/api/drivers/AB10011?user=david",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"drivers",
+								"AB10011"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "david"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Jul 2019 16:16:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Assign a car to a driver",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/cars/KKK112/driver/AB10002?user=john",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cars",
+						"KKK112",
+						"driver",
+						"AB10002"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "john"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Assign a car to a driver - an empoyee has access for assign a driver to a car",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3000/api/cars/KKK112/driver/AB10002?user=john",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cars",
+								"KKK112",
+								"driver",
+								"AB10002"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "john"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "64"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"40-RPwtjdHTiw4n1bRtHIbLLqHKvCc\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Jul 2019 16:33:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"field\": \"plate\",\n    \"msg\": \"Car is already be assigned to a driver\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Remove a driver from a car",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/cars/KKK112/driver/AB10001?user=john",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cars",
+						"KKK112",
+						"driver",
+						"AB10001"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "john"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Remove a driver from a car - an employee has access to remove a driver from a car",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3000/api/cars/KKK112/driver/AB10001?user=john",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cars",
+								"KKK112",
+								"driver",
+								"AB10001"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "john"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Jul 2019 16:34:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				}
+			]
+		}
+	]
+}

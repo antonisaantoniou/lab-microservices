@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "0f52684f-b291-460d-b97a-fe2189d16ce3",
+		"name": "Penalties Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all penalties",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/penalties/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"penalties",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all penalties - success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/penalties/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"penalties",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2869"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b35-IvoC/TNuUoa2Duq/r8DFvEil+nI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Jul 2019 07:04:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"penalties\": [\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 131,\n            \"points\": 215,\n            \"created_at\": \"2019-07-22T05:15:56.866Z\",\n            \"updated_at\": \"2019-07-22T05:15:56.866Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 138,\n            \"points\": 250,\n            \"created_at\": \"2019-07-22T05:19:03.419Z\",\n            \"updated_at\": \"2019-07-22T05:19:03.419Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 103,\n            \"points\": 75,\n            \"created_at\": \"2019-07-22T05:19:14.012Z\",\n            \"updated_at\": \"2019-07-22T05:19:14.012Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 99,\n            \"points\": 58,\n            \"created_at\": \"2019-07-22T05:19:34.932Z\",\n            \"updated_at\": \"2019-07-22T05:19:34.932Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 67,\n            \"points\": 7,\n            \"created_at\": \"2019-07-22T06:33:58.163Z\",\n            \"updated_at\": \"2019-07-22T06:33:58.163Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 47,\n            \"points\": 0,\n            \"created_at\": \"2019-07-22T06:34:18.150Z\",\n            \"updated_at\": \"2019-07-22T06:34:18.150Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 68,\n            \"points\": 8,\n            \"created_at\": \"2019-07-22T06:34:38.151Z\",\n            \"updated_at\": \"2019-07-22T06:34:38.151Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 136,\n            \"points\": 240,\n            \"created_at\": \"2019-07-22T06:34:58.163Z\",\n            \"updated_at\": \"2019-07-22T06:34:58.163Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 75,\n            \"points\": 15,\n            \"created_at\": \"2019-07-22T06:35:18.164Z\",\n            \"updated_at\": \"2019-07-22T06:35:18.164Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 13,\n            \"points\": 0,\n            \"created_at\": \"2019-07-22T06:35:38.167Z\",\n            \"updated_at\": \"2019-07-22T06:35:38.167Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 104,\n            \"points\": 80,\n            \"created_at\": \"2019-07-22T06:35:58.175Z\",\n            \"updated_at\": \"2019-07-22T06:35:58.175Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 104,\n            \"points\": 80,\n            \"created_at\": \"2019-07-22T06:36:44.648Z\",\n            \"updated_at\": \"2019-07-22T06:36:44.648Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 102,\n            \"points\": 70,\n            \"created_at\": \"2019-07-22T06:37:04.653Z\",\n            \"updated_at\": \"2019-07-22T06:37:04.653Z\"\n        },\n        {\n            \"plates_no\": \"KKK112\",\n            \"license_no\": \"AB10001\",\n            \"speed\": 60,\n            \"points\": 0,\n            \"created_at\": \"2019-07-22T06:37:10.073Z\",\n            \"updated_at\": \"2019-07-22T06:37:10.073Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 89,\n            \"points\": 38,\n            \"created_at\": \"2019-07-22T06:37:24.656Z\",\n            \"updated_at\": \"2019-07-22T06:37:24.656Z\"\n        },\n        {\n            \"plates_no\": \"KKK112\",\n            \"license_no\": \"AB10001\",\n            \"speed\": 123,\n            \"points\": 175,\n            \"created_at\": \"2019-07-22T06:37:30.076Z\",\n            \"updated_at\": \"2019-07-22T06:37:30.076Z\"\n        },\n        {\n            \"plates_no\": \"KKK112\",\n            \"license_no\": \"AB10001\",\n            \"speed\": 80,\n            \"points\": 20,\n            \"created_at\": \"2019-07-22T06:37:50.083Z\",\n            \"updated_at\": \"2019-07-22T06:37:50.083Z\"\n        },\n        {\n            \"plates_no\": \"KKK112\",\n            \"license_no\": \"AB10001\",\n            \"speed\": 101,\n            \"points\": 65,\n            \"created_at\": \"2019-07-22T06:43:57.013Z\",\n            \"updated_at\": \"2019-07-22T06:43:57.013Z\"\n        },\n        {\n            \"plates_no\": \"KKK112\",\n            \"license_no\": \"AB10001\",\n            \"speed\": 88,\n            \"points\": 36,\n            \"created_at\": \"2019-07-22T06:44:17.016Z\",\n            \"updated_at\": \"2019-07-22T06:44:17.016Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get penalties based on driver's license",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/penalties/drivers/AB100",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"penalties",
+						"drivers",
+						"AB100"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get penalties based on driver's license - Driver does not exist",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/penalties/drivers/AB100",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"penalties",
+								"drivers",
+								"AB100"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"31-wVr9aVLyV7zQEU0lPoV7/wjuM8s\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Jul 2019 07:28:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"field\": \"license\",\n    \"msg\": \"Driver does not exist\"\n}"
+				},
+				{
+					"name": "Get penalties based on driver's license - success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/penalties/drivers/AB10002",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"penalties",
+								"drivers",
+								"AB10002"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2142"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"85e-JYDVsJb8o/QkC4NX8mdN2owl+Tg\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Jul 2019 07:28:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"penalties\": [\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 131,\n            \"points\": 215,\n            \"created_at\": \"2019-07-22T05:15:56.866Z\",\n            \"updated_at\": \"2019-07-22T05:15:56.866Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 138,\n            \"points\": 250,\n            \"created_at\": \"2019-07-22T05:19:03.419Z\",\n            \"updated_at\": \"2019-07-22T05:19:03.419Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 103,\n            \"points\": 75,\n            \"created_at\": \"2019-07-22T05:19:14.012Z\",\n            \"updated_at\": \"2019-07-22T05:19:14.012Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 99,\n            \"points\": 58,\n            \"created_at\": \"2019-07-22T05:19:34.932Z\",\n            \"updated_at\": \"2019-07-22T05:19:34.932Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 67,\n            \"points\": 7,\n            \"created_at\": \"2019-07-22T06:33:58.163Z\",\n            \"updated_at\": \"2019-07-22T06:33:58.163Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 47,\n            \"points\": 0,\n            \"created_at\": \"2019-07-22T06:34:18.150Z\",\n            \"updated_at\": \"2019-07-22T06:34:18.150Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 68,\n            \"points\": 8,\n            \"created_at\": \"2019-07-22T06:34:38.151Z\",\n            \"updated_at\": \"2019-07-22T06:34:38.151Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 136,\n            \"points\": 240,\n            \"created_at\": \"2019-07-22T06:34:58.163Z\",\n            \"updated_at\": \"2019-07-22T06:34:58.163Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 75,\n            \"points\": 15,\n            \"created_at\": \"2019-07-22T06:35:18.164Z\",\n            \"updated_at\": \"2019-07-22T06:35:18.164Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 13,\n            \"points\": 0,\n            \"created_at\": \"2019-07-22T06:35:38.167Z\",\n            \"updated_at\": \"2019-07-22T06:35:38.167Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 104,\n            \"points\": 80,\n            \"created_at\": \"2019-07-22T06:35:58.175Z\",\n            \"updated_at\": \"2019-07-22T06:35:58.175Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 104,\n            \"points\": 80,\n            \"created_at\": \"2019-07-22T06:36:44.648Z\",\n            \"updated_at\": \"2019-07-22T06:36:44.648Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 102,\n            \"points\": 70,\n            \"created_at\": \"2019-07-22T06:37:04.653Z\",\n            \"updated_at\": \"2019-07-22T06:37:04.653Z\"\n        },\n        {\n            \"plates_no\": \"KKK111\",\n            \"license_no\": \"AB10002\",\n            \"speed\": 89,\n            \"points\": 38,\n            \"created_at\": \"2019-07-22T06:37:24.656Z\",\n            \"updated_at\": \"2019-07-22T06:37:24.656Z\"\n        }\n    ],\n    \"total_points\": 1136\n}"
+				}
+			]
+		}
+	]
+}
